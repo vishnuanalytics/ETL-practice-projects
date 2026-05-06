@@ -1,0 +1,16 @@
+# Ignore everything by default
+*
+
+# Except these specific things
+!daily etl/
+!daily etl/**
+!db/
+!db/**
+!requirements.txt
+!.gitignore
+
+# Always ignore these even inside allowed folders
+**/__pycache__/
+**/*.pyc
+*.env
+.env
