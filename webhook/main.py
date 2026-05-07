@@ -50,8 +50,8 @@ async def order_relay(request: Request):
             )
             ON CONFLICT (up_order_id) DO UPDATE SET
                 current_state = EXCLUDED.current_state,
-                promised_delivery_at = EXCLUDE.promised_delivery_at,
-                payable_amount = EXCLUDE.payable_amount,
+                promised_delivery_at = EXCLUDED.promised_delivery_at,
+                payable_amount = EXCLUDED.payable_amount,
                 fetched_at = NOW()
         """
 
