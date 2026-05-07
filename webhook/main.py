@@ -9,6 +9,10 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="ETL Webhook")
 
+@app.get("/ping")
+def ping():
+    return {"ping": "pong"}
+
 # Health check
 @app.get("/")
 def health():
