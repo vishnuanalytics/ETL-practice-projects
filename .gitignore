@@ -2,10 +2,6 @@
 *
 
 # Except these specific things
-!daily etl/
-!daily etl/**
-!db/
-!db/**
 !webhook/
 !webhook/**
 !requirements.txt
