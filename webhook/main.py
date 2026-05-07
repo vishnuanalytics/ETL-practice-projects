@@ -14,7 +14,7 @@ def ping():
     return {"ping": "pong"}
 
 # Health check
-@app.get("/")
+@app.get("/", methods=["GET", "HEAD"])
 def health():
     return {
         "status": "ok",
