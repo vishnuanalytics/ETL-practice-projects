@@ -10,6 +10,7 @@
 !webhook/**
 !requirements.txt
 !render.yaml
+!runtime.txt
 !.gitignore
 
 # Always ignore these even inside allowed folders
