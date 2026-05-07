@@ -6,7 +6,10 @@
 !daily etl/**
 !db/
 !db/**
+!webhook/
+!webhook/**
 !requirements.txt
+!render.yaml
 !.gitignore
 
 # Always ignore these even inside allowed folders
