@@ -1,6 +1,6 @@
 import logging
 from fastapi import FastAPI, Request, HTTPException
-from starlette.responses import Response
+from fastapi.routing import APIRoute
 from datetime import datetime, timezone
 from database import get_connection
 from models import unix_ms_to_dt, parse_order_relay, parse_order_status
@@ -15,7 +15,7 @@ def ping():
     return {"ping": "pong"}
 
 # Health check
-@app.get("/", methods=["GET", "HEAD"])
+@app.api_route("/", methods=["GET", "HEAD"])
 def health():
     return {
         "status": "ok",
