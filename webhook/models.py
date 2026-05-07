@@ -10,7 +10,7 @@ def parse_order_relay(data:dict)->dict:
     order = data.get("order", {})
     details = order.get("details", {})
     store    = order.get("store", {})
-    customer = order.get("customer", {})
+    customer = data.get("customer", {})
 
     return {
         "up_order_id": details.get("id"),
