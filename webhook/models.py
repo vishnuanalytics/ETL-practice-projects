@@ -21,7 +21,7 @@ def parse_order_relay(data:dict)->dict:
         "store_city": store.get("city"),
         "customer_id": customer.get("id"),
         "customer_phone": customer.get("phone"),
-        "channel": customer.get("channel"),
+        "channel": details.get("channel"),
         "order_placed_at": unix_ms_to_dt(details.get("created")),
         "promised_delivery_at": unix_ms_to_dt(details.get("delivery_datetime")),
         "payable_amount": details.get("payable_amount"),
